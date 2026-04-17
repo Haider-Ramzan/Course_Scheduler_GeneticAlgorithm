@@ -16,10 +16,7 @@ This project implements a Genetic Algorithm (GA) to optimize weekly course sched
 ### Installation
 
 ```bash
-# 1. Navigate to the project directory
-cd "assignment 2/q2"
-
-# 2. Install minimal dependencies
+Install minimal dependencies:
 pip install matplotlib numpy
 ```
 

@@ -60,8 +60,7 @@ q2/
 ## Architecture & Design Decisions
 
 1. **Prerequisite Pre-Filtering:** Prerequisites are resolved entirely before the GA starts. At initialization, each student's transcript is evaluated once, and their selectable "elective pool" is securely truncated to only courses they have passed the prerequisites for. The GA operates blindly of prerequisites because its course selection space is pre-filtered, massively accelerating performance.
-2. **Hardcoded Configurations:** There is no reliance on slow YAML parsed config files; all hyper-parameters (such as mutation probabilities, fitness weights, and selection constraints) have been converted to native Python constants placed directly at the top of their logically related `.py` module (e.g. fitness weights exist exclusively at the top of `fitness.py`).
-3. **No External Wrappers:** Tabulate printing and Python's logging library were stripped out in favor of fast native string formatting/console printing.
+2. **Hardcoded Configurations:** All hyper-parameters (such as mutation probabilities, fitness weights, and selection constraints) have been converted to native Python constants placed directly at the top of their logically related `.py` module (e.g. fitness weights exist exclusively at the top of `fitness.py`).
 
 ## Chromosome Encoding
 
